@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  - push
+  - pull_request
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  lint:
+    name: 🧐 Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pdm install -G lint --frozen-lockfile
+      - name: Lint with ruff
+        run: pdm run lint-ruff
