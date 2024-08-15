@@ -56,3 +56,11 @@ select = [
 
 [tool.ruff.lint.isort]
 known-local-folder = ["demo"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "demo.settings"
+pythonpath = ". src"
+addopts = "--cov src"
+
+[tool.coverage.run]
+branch = true
