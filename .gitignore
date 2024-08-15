@@ -1,0 +1,13 @@
+# virtual environments
+.tox/
+.venv/
+
+# byte-compiled / optimized files
+__pycache__/
+
+# pdm
+.pdm-python
+.pdm-build/
+
+# test coverage data
+.coverage
