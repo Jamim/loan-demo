@@ -22,6 +22,12 @@ distribution = false
 lint = [
     "ruff",
 ]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-django",
+    "factory-boy",
+]
 
 [tool.pdm.scripts]
 lint-ruff = "scripts/ruff"
