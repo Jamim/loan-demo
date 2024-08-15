@@ -5,7 +5,7 @@
 groups = ["default", "lint"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:ebbad37f1111d9395d5b43ee6be218f66442fdc6b6cfece3c9db86e6b18274cb"
+content_hash = "sha256:77aeb59add19fee886cc70968aa8843bb3208c3c3b19b29b4f6c96484ce0c6fd"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -56,6 +56,22 @@ files = [
 ]
 
 [[package]]
+name = "psycopg"
+version = "3.2.1"
+requires_python = ">=3.8"
+summary = "PostgreSQL database adapter for Python"
+groups = ["default"]
+dependencies = [
+    "backports-zoneinfo>=0.2.0; python_version < \"3.9\"",
+    "typing-extensions>=4.4",
+    "tzdata; sys_platform == \"win32\"",
+]
+files = [
+    {file = "psycopg-3.2.1-py3-none-any.whl", hash = "sha256:ece385fb413a37db332f97c49208b36cf030ff02b199d7635ed2fbd378724175"},
+    {file = "psycopg-3.2.1.tar.gz", hash = "sha256:dc8da6dc8729dacacda3cc2f17d2c9397a70a66cf0d2b69c91065d60d5f00cb7"},
+]
+
+[[package]]
 name = "ruff"
 version = "0.5.7"
 requires_python = ">=3.7"
@@ -91,6 +107,17 @@ groups = ["default"]
 files = [
     {file = "sqlparse-0.5.1-py3-none-any.whl", hash = "sha256:773dcbf9a5ab44a090f3441e2180efe2560220203dc2f8c0b0fa141e18b505e4"},
     {file = "sqlparse-0.5.1.tar.gz", hash = "sha256:bb6b4df465655ef332548e24f08e205afc81b9ab86cb1c45657a7ff173a3a00e"},
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.2"
+requires_python = ">=3.8"
+summary = "Backported and Experimental Type Hints for Python 3.8+"
+groups = ["default"]
+files = [
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
 ]
 
 [[package]]
