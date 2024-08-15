@@ -63,5 +63,12 @@ DJANGO_SETTINGS_MODULE = "demo.settings"
 pythonpath = ". src"
 addopts = "--cov src"
 
+[tool.pytest_env]
+ENV_NAME = "test"
+SECRET_KEY = "test"
+POSTGRES_DB = "test"
+POSTGRES_USER = "test"
+POSTGRES_PASSWORD = "test"
+
 [tool.coverage.run]
 branch = true
